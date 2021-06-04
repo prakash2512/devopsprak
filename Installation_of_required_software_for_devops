@@ -13,3 +13,27 @@ aws configure
 #### it will ask accesskey and secretkey and region
 
 
+### Setup JAVA ENV VAR
+
+sudo apt install openjdk-14-jdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+echo $JAVA_HOME
+
+###  Add JAVA bin directory to the PATH variable
+
+export PATH=$PATH:$JAVA_HOME/bin
+echo $PATH
+java -version
+
+
+### installing Jenkis 
+
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+
+
