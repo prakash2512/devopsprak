@@ -1,0 +1,31 @@
+stages:
+  - build
+  - test
+  - deploy
+build:
+  stage: build
+  tags:
+    - Build
+  script:
+    - sudo chmod  o+w /var/www/html  
+    - sudo cp * -r /var/www/html/
+    - echo " Job is Completed "
+  timeout: 15m 
+test:
+  stage: test
+  tags:
+    - Test
+  script:
+    - sudo chmod  o+w /var/www/html  
+    - sudo cp * -r /var/www/html/
+    - echo " Job is Completed "   
+  timeout: 15m
+deploy:
+  stage: deploy
+  tags:
+    - Deploy
+  script:
+    - sudo chmod  o+w /var/www/html  
+    - sudo cp * -r /var/www/html/
+    - echo " Job is Completed "
+  timeout: 15m
