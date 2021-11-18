@@ -18,7 +18,7 @@ Header set X-Frame-Options: "sameorigin"
 a2enmod rewite
 a2enmod headers
 a2dissite 000.default.conf
-a2enmod existing.conf
+a2ensite existing.conf
 
 
 ### Need to check with staging or production or development /var/www/html index.php 
