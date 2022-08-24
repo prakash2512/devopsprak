@@ -1,0 +1,17 @@
+Deployment for dish
+
+--DBConnection.java   --line 52,53
+--Appsprops.properties
+--Hibernate.cfg.xml
+--activiti.cfg.xml
+--Application plugin.java---last two lines --Registration mail
+
+wildfly is production
+Tomcat is local 
+after taking build
+
+dish.1.2.0.war --open with 7zip
+--go inside the folder webinfo and check Log4properties if any delete from it and also check in classes folder and delete the log4properties and copy log4properties from e drive to web-info
+--delete lib folder
+--copy lib from e and paste here
+
